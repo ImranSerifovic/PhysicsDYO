@@ -639,7 +639,7 @@
 		x = mx / cScale;
 		y = (canvas.height - my) / cScale;
 
-		setObstacle(x,y, true);
+		setObstacle(x,y,50,50, true);
 	}
 
 	function drag(x, y) {
@@ -649,7 +649,7 @@
 			let my = y - bounds.top - canvas.clientTop;
 			x = mx / cScale;
 			y = (canvas.height - my) / cScale;
-			setObstacle(x,y, false);
+			setObstacle(x,y,50,50, true);
 		}
 	}
 
