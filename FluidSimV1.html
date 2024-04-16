@@ -639,7 +639,7 @@
 		x = mx / cScale;
 		y = (canvas.height - my) / cScale;
 
-		setObstacle(x,y, 50,50, true);
+		setObstacle(x,y, true);
 	}
 
 	function drag(x, y) {
@@ -649,7 +649,7 @@
 			let my = y - bounds.top - canvas.clientTop;
 			x = mx / cScale;
 			y = (canvas.height - my) / cScale;
-			setObstacle(x,y, 50,50, true);
+			setObstacle(x,y, false);
 		}
 	}
 
@@ -682,6 +682,7 @@
 		event.stopImmediatePropagation();
 		drag(event.touches[0].clientX, event.touches[0].clientY)
 	}, { passive: false});
+	
 
 
 	document.addEventListener('keydown', event => {
